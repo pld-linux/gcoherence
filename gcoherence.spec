@@ -16,6 +16,7 @@ Requires:	python-coherence
 Requires:	python-pygtk-gtk
 Requires:	python-pyxdg
 %pyrequires_eq	python-modules
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -47,12 +48,12 @@ mv $RPM_BUILD_ROOT%{_iconsdir}/hicolor/32x32/{,apps/}gcoherence.png
 rm -rf $RPM_BUILD_ROOT
 
 %post
-%update_icon_cache hicolor
 %update_desktop_database_post
+%update_icon_cache hicolor
 
 %postun
-%update_icon_cache hicolor
 %update_desktop_database_postun
+%update_icon_cache hicolor
 
 %files -f gcoherence.lang
 %defattr(644,root,root,755)
