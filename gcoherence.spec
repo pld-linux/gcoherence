@@ -9,6 +9,7 @@ Source0:	http://29a.ch/gcoherence/%{name}-%{version}.tar.gz
 URL:		http://29a.ch/gcoherence/
 BuildRequires:	python-devel >= 1:2.3.0
 BuildRequires:	python-pygtk-devel
+BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	gtk-update-icon-cache
