@@ -1,7 +1,7 @@
 Summary:	A simple free media server
 Name:		gcoherence
 Version:	0.1.0
-Release:	1
+Release:	2
 License:	GPL v3
 Group:		X11/Applications
 Source0:	http://29a.ch/gcoherence/%{name}-%{version}.tar.gz
@@ -11,6 +11,7 @@ BuildRequires:	python-devel >= 1:2.3.0
 BuildRequires:	python-pygtk-devel
 BuildRequires:	rpmbuild(macros) >= 1.219
 Requires(post,postun):	desktop-file-utils
+Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
 Requires:	python-coherence
 Requires:	python-pygtk-gtk
