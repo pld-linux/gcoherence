@@ -28,14 +28,12 @@ A simple free media server.
 %setup -q
 
 %build
-%{__python} setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__python} setup.py install \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 install -d $RPM_BUILD_ROOT%{_iconsdir}/hicolor/32x32/apps
 mv $RPM_BUILD_ROOT%{_iconsdir}/hicolor/32x32/{,apps/}gcoherence.png
